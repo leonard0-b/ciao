@@ -14,7 +14,6 @@ body {
   background-position: center;
 }
 
-
 .logo {
   color: aliceblue;
 }
@@ -26,7 +25,10 @@ body {
 nav {
   background-color: darkcyan;
   height: 80px; /* altezza uguale a navcollapse top */ 
-  position: relative;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
 }
 
 .container {
@@ -62,9 +64,10 @@ nav {
   width: 100%;
   transition: height 1s;
   padding-left: 0px;
-  position: absolute;
+  margin-top: 80px;
+/*   position: absolute;
   left: 0;
-  top: 80px;
+  top: 80px; */
   z-index: 0;
 }
 
@@ -88,6 +91,10 @@ nav {
   transition:height .8s;
 }
 
+/* main {
+  margin-top: 80px;  altezza navbar
+} */
+
 @media all and (max-width: 768px) {
   .hamburger > * {
     display: block;
@@ -98,3 +105,8 @@ nav {
   }
 }
 
+/* se volessi mettere il menu in trasparenza che non spinga 
+in già il testo sotto di se, va rimesso il div "list-dropdown"
+dentro alla nav e scommentate le righe 68-70 e commenta 67 e 95
+
+ */
